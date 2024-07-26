@@ -1,0 +1,34 @@
+/* Kiểu dáng chung của thanh điều hướng */
+.nav {
+	display: flex; /* Sử dụng flexbox để sắp xếp các mục */
+	justify-content: center; /* Căn giữa các mục theo chiều ngang */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #5aa538;
+	}
+
+.nav li {
+	margin: 0 10px; /* Khoảng cách giữa các mục */
+	}
+
+/* Kiểu liên kết */
+.nav a {
+	display: block; /* Làm cho toàn bộ vùng liên kết có thể nhấp được */
+	padding: 15px;
+	color: white; /* Màu chữ trắng */
+	text-decoration: none;
+	transition: background-color 0.3s; /* Chuyển đổi nền mượt mà khi di chuột qua */
+	}
+
+/* Hiệu ứng khi di chuột qua */
+.nav a:hover {
+	background-color: #555; /* Nền sáng hơn một chút khi di chuột qua */
+	}
+
+/* Kiểu liên kết đang hoạt động (Tùy chọn) */
+/* Bạn sẽ cần thêm một lớp vào liên kết đang hoạt động trong JSX của mình */
+.nav .active {
+	background-color: #4CAF50; /* Nền xanh lá cây cho liên kết đang hoạt động */
+	color: white;
+	}

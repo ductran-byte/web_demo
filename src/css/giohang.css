@@ -1,0 +1,42 @@
+/* giohang.css */
+table {
+	width: 100%; /* Chiếm toàn bộ chiều rộng của container cha */
+	border-collapse: collapse; /* Gom các đường viền lại */
+	margin: 20px auto; /* Căn giữa bảng */
+	}
+
+th, td {
+	border: 1px solid #ddd; /* Đường viền cho các ô */
+	padding: 10px;
+	text-align: left;
+	}
+
+th {
+	background-color: #f2f2f2; /* Nền xám nhạt cho tiêu đề */
+	}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9; /* Nền xám rất nhạt cho các dòng chẵn */
+	}
+
+button {
+	background-color: #dc3545; /* Màu đỏ (hoặc tùy chỉnh) */
+	color: white;
+	padding: 8px 15px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	}
+
+button:hover {
+	background-color: #c82333; /* Màu đỏ đậm hơn khi di chuột */
+	}
+
+/* Định dạng cho hình ảnh sản phẩm */
+img {
+	max-width: 50px;
+	max-height: 50px;
+	object-fit: cover;
+	margin-right: 10px; /* Khoảng cách giữa ảnh và tên sản phẩm */
+	vertical-align: middle; /* Căn giữa ảnh với văn bản */
+	}

@@ -1,0 +1,93 @@
+/* product.css */
+
+.product-item {
+	display: flex;
+	flex-direction: column; /* Sắp xếp theo chiều dọc */
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	overflow: hidden; /* Giấu các phần tử tràn ra khỏi vùng chứa */
+	}
+
+.product-image img {
+	width: 100%;
+	height: 200px; /* Điều chỉnh chiều cao theo ý muốn */
+	object-fit: cover; /* Hoặc contain nếu bạn muốn giữ nguyên tỷ lệ */
+	transition: transform 0.3s ease; /* Hiệu ứng hover */
+	}
+
+.product-image img:hover {
+	transform: scale(1.05); /* Phóng to nhẹ khi hover */
+	}
+
+.discount-label {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: #ff4d4d;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	}
+
+.installment-label {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background-color: #4CAF50; /* Màu xanh lá cây */
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	}
+
+.product-info {
+	padding: 15px;
+	text-align: center;
+	}
+
+.product-name {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	color: #333; /* Màu xám đậm */
+	}
+
+.product-price {
+	font-size: 1.1em;
+	font-weight: bold;
+	color: red;
+	margin-bottom: 5px;
+	}
+
+.add-to-cart {
+	background-color: #f0ad4e;
+	color: white;
+	padding: 8px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%; /* Chiếm toàn bộ chiều rộng */
+	}
+/* Các kiểu CSS trước đó */
+.product-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 cột mặc định */
+	gap: 15px;
+	}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.product-list {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		}
+	}
+
+/* Căn giữa khi không đủ 4 sản phẩm */
+.product-list.center-items {
+	justify-content: center;
+	}
+.product-image {
+	width: 1000%; /* Chiều rộng khung ảnh bằng chiều rộng của product-item */
+	height: 2500px; /* Điều chỉnh chiều cao khung ảnh theo ý muốn */
+	overflow: hidden; /* Giấu phần ảnh bị tràn ra ngoài khung */
+	}
