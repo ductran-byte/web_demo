@@ -2,6 +2,7 @@ import { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../css/layout1.css";
 import { CurrentUserContext } from "../App";
+import Footer from "../component/footer";
 
 function Layout1({ children }) {
     const { isLoggedIn, isAdmin } = useContext(CurrentUserContext);
@@ -11,19 +12,22 @@ function Layout1({ children }) {
 
             <ul className="nav">
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">Trang Chủ</Link>
                 </li>
                 <li>
                     <Link to="/giohang">Giỏ Hàng</Link>
                 </li>
+                <li>
+                    <Link to="/contact">Contact</Link>
+                </li>
                 {!isLoggedIn ? (
                     <li>
-                        <Link to="/login">Login</Link>
+                        <Link to="/login">Đăng Nhập</Link>
                     </li>
                 ) : (
                     <>
                         <li>
-                            <Link to="/logout">Logout</Link>
+                            <Link to="/logout">Đăng Xuất</Link>
                         </li>
                         {isAdmin && (
                             <li>
@@ -35,6 +39,7 @@ function Layout1({ children }) {
             </ul>
 
             {children}
+            <Footer/>
         </Fragment>
     );
 }

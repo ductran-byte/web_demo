@@ -5,11 +5,17 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	background-color: #5aa538;
+	background-color: #d19e44;
+	position: sticky; /* Ghim thanh điều hướng */
+	top: 0;          /* Đặt thanh điều hướng ở đầu trang */
+	width: 100%;       /* Chiếm toàn bộ chiều rộng */
+	z-index: 100;      /* Đảm bảo thanh điều hướng nằm trên các phần tử khác */
+	border-radius: 10px;
 	}
 
 .nav li {
 	margin: 0 10px; /* Khoảng cách giữa các mục */
+	border-radius: 10px;
 	}
 
 /* Kiểu liên kết */
@@ -19,11 +25,14 @@
 	color: white; /* Màu chữ trắng */
 	text-decoration: none;
 	transition: background-color 0.3s; /* Chuyển đổi nền mượt mà khi di chuột qua */
+	font-weight: bold;
+
 	}
 
 /* Hiệu ứng khi di chuột qua */
 .nav a:hover {
 	background-color: #555; /* Nền sáng hơn một chút khi di chuột qua */
+	border-radius: 10px;
 	}
 
 /* Kiểu liên kết đang hoạt động (Tùy chọn) */

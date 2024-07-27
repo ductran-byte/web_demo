@@ -1,53 +1,55 @@
 import { useEffect, useState } from "react";
-import * as giohang from "../service/giohang"
+import * as giohang from "../service/giohang";
 import "../css/giohang.css";
-import { Link } from "react-router-dom";
 
 function Giohang() {
     const [students, setStudents] = useState([]);
 
-    useEffect(()=> {
+    useEffect(() => {
         const getAll = async () => {
             const result = await giohang.getAllGioHang();
             setStudents(result);
-        }
+        };
         getAll();
     }, []);
 
-    console.log(students)
-
-    const deleteStd = async(id) => {
-        const stds = await giohang.deleteGioHang(id);
-        setStudents(stds);
-    }
+    const deleteStd = async (id) => {
+        if (window.confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?")) {
+            await giohang.deleteGioHang(id);
+            setStudents(students.filter((item) => item.id !== id));
+        }
+    };
 
     return (
-        <>
-            <table style={{width:700}} border={1}>
+        <div className="table-container">
+            <table className="table">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Soluong</th>
-                    <th>Gia</th>
-                    <th>Action</th>
+                    <th className="th">Id</th>
+                    <th className="th">Tên Sản Phẩm</th>
+                    <th className="th">Số Lượng</th>
+                    <th className="th">Giá Tiền</th>
+
+                    <th className="th">Hành Động</th>
                 </tr>
                 </thead>
                 <tbody>
-                {students.map(item => (
+                {students.map((item) => (
                     <tr key={item.id}>
-                        <td>{item.id}</td>
-                        <td>{item.name}</td>
-                        <td>{item.qty}</td>
-                        <td>{item.price}</td>
-                        <td>
-                            <button onClick={() => deleteStd(item.id)}>Delete</button>
+                        <td className="td">{item.id}</td>
+                        <td className="td">{item.name}</td>
+                        <td className="td">{item.qty}</td>
+                        <td className="td">{item.price}</td>
+                        <td className="td">
+                            <button className="button" onClick={() => deleteStd(item.id)}>
+                                Xoá Sản Phẩm
+                            </button>
                         </td>
                     </tr>
                 ))}
                 </tbody>
             </table>
-        </>
+        </div>
     );
 }
 

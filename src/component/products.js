@@ -17,7 +17,16 @@ function Products() {
     return (
         <div className="products-page">
             <div className="products-header">
-                <h1>Danh Sách Sản Phẩm</h1>
+                <h1 style={{
+                    fontSize: '36px',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    color: '#3f51b5',
+                    marginBottom: '30px',
+                    marginTop: '30px',
+                    position: 'sticky',
+                    top: 0,
+                }}>Danh Sách Sản Phẩm</h1>
             </div>
             <div className={`product-list ${students.length < 4 ? 'center-items' : ''}`}>
                 {students.map(student => (

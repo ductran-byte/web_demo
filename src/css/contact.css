@@ -1,0 +1,13 @@
+/* contact.css */
+.contact-container {
+	display: flex;
+	flex-wrap: wrap; /* Cho phép xuống dòng khi màn hình nhỏ */
+	justify-content: space-around; /* Chia đều khoảng cách giữa các phần */
+	}
+
+.contact-info, .contact-map, .contact-form {
+	width: 30%; /* Điều chỉnh chiều rộng nếu cần */
+	margin-bottom: 20px;
+	}
+
+/* ...Các định dạng khác cho form, bản đồ và thông tin liên hệ ... */

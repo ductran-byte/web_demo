@@ -29,11 +29,11 @@ function Login() {
         <section>
             <div className="login-form-wrapper"></div>
             <div className="login-form">
-                <h3>LOG IN</h3>
+                <h3>Đăng Nhập</h3>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
-                        placeholder="Username"
+                        placeholder="Tài Khoản"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         autoFocus
@@ -41,7 +41,7 @@ function Login() {
                     <br />
                     <input
                         type="password"
-                        placeholder="Password"
+                        placeholder="Mật Khẩu"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />

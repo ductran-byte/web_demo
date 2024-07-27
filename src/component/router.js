@@ -5,7 +5,8 @@ import Products from "./products";
 import Giohang from "./giohang";
 import Login from "./login";
 import Logout from "./logout";
-import ProtectedRoute from "./ProtectedRoute"; // Import ProtectedRoute
+import ProtectedRoute from "./ProtectedRoute";
+import Contact from "./contact";
 
 const std = {};
 
@@ -15,7 +16,8 @@ const routes = [
     { path: "/logout", component: Logout, layout: Layout1 },
     { path: "/admin", component: ListStudent, layout: Layout1 },
     { path: "/student/form/:id?", component: FormStudent, layout: Layout1 },
-    { path: "/giohang", component: Giohang, layout: ProtectedRoute}, // Bảo vệ route giỏ hàng
+    {path: "/contact", component:Contact, layout: Layout1 },
+    { path: "/giohang", component: Giohang, layout: ProtectedRoute},
 ];
 
 export { routes, std };
