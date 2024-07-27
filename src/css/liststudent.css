@@ -1,0 +1,78 @@
+/* giohang.css */
+
+.table-container {
+	display: block;       /* Đảm bảo nút chiếm toàn bộ chiều rộng của container */
+	margin-left: auto;    /* Căn lề trái tự động */
+	margin-right: auto;   /* Căn lề phải tự động */
+	}
+.button1{
+	margin-bottom: 30px; /* Khoảng cách giữa nút và bảng */
+	}
+.table {
+	width: 50%;
+	border-collapse: collapse;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+
+.th .td{
+	border: 1px solid #ddd;
+	padding: 15px;      /* Tăng padding cho dễ đọc */
+	text-align: left;
+	display: flex;             /* Sử dụng Flexbox để căn chỉnh */
+	justify-content: space-around; /* Phân bố đều khoảng cách giữa các nút */
+	align-items: center;        /* Căn giữa các nút theo chiều dọc */
+
+	}
+
+.th {
+	background-color: #4CAF50;
+	color: white;
+	font-weight: bold; /* Làm chữ đậm cho phần header */
+	}
+
+.tbody .tr:nth-child(even) {
+	background-color: #f2f2f2;
+	}
+
+.button {
+	background-color: #f44336;
+	color: white;
+	padding: 10px 15px;  /* Tăng kích thước nút */
+	border: none;
+	border-radius: 5px;   /* Bo góc nút */
+	cursor: pointer;
+	transition: background-color 0.3s; /* Thêm hiệu ứng chuyển tiếp mượt mà */
+	display: block; /* Cho phép margin auto hoạt động */
+	margin: 0 auto; /* Căn giữa theo chiều ngang */
+	}
+
+.button:hover {
+	background-color: #d32f2f;
+	}
+.pic img {
+	max-width: 20%;
+	height: 20%;
+	}
+.action {
+	display: flex;
+	flex-direction: column; /* Sắp xếp các nút theo chiều dọc */
+	justify-content: center; /* Căn giữa theo chiều ngang */
+	align-items: center;    /* Căn giữa theo chiều dọc  
+ */
+	}
+
+.action .button2 {
+	background-color: #f44336; /* Màu đỏ */
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin: 10px 0; /* Thêm khoảng cách giữa các nút */
+	display: flex;
+	justify-content: space-around;
+	}
+
+.action .button2:hover {
+	background-color: #d32f2f; /* Màu đỏ đậm hơn khi hover */
+	}

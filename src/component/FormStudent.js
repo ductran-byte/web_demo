@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import * as studentService from "../service/student";
 import { useNavigate, useParams } from "react-router-dom";
+import "../css/formstudent.css";
 
 function FormStudent() {
     const [name, setName] = useState("");
@@ -14,7 +15,7 @@ function FormStudent() {
 
     const save = () => {
         const addStudent = async () => {
-            await studentService.saveStudent(name, age, pic, id, isAddMode); // Pass image
+            await studentService.saveStudent(name, age, pic, id, isAddMode);
             return navigate("/admin");
         };
         addStudent();
@@ -27,7 +28,7 @@ function FormStudent() {
                 if (std) {
                     setAge(std.age);
                     setName(std.name);
-                    setPic(std.pic); // Set existing image if editing
+                    setPic(std.pic);
                 }
             };
             getStudent();
@@ -35,30 +36,30 @@ function FormStudent() {
     }, []);
 
     return (
-        <>
+        <div className="form-container"> {/* Thêm class "form-container" */}
             <input type="hidden" value={id}/>
             <input
                 type="text"
-                placeholder="Your name"
+                placeholder="Tên Sản Phẩm"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
             <input
                 type="number"
-                placeholder="Your age"
+                placeholder="Giá Tiền"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
             />
             <input
                 type="text"
-                placeholder="Your picture"
+                placeholder="Nhập Link Ảnh"
                 value={pic}
                 onChange={(e) => setPic(e.target.value)}
             />
 
 
-            <button onClick={() => save()}>Save</button>
-        </>
+            <button onClick={() => save()}>Lưu</button>
+        </div>
     );
 }
 

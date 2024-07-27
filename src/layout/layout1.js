@@ -11,19 +11,19 @@ function Layout1({ children }) {
 
             <ul className="nav">
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">Trang Chủ</Link>
                 </li>
                 <li>
                     <Link to="/giohang">Giỏ Hàng</Link>
                 </li>
                 {!isLoggedIn ? (
                     <li>
-                        <Link to="/login">Login</Link>
+                        <Link to="/login">Đăng Nhập</Link>
                     </li>
                 ) : (
                     <>
                         <li>
-                            <Link to="/logout">Logout</Link>
+                            <Link to="/logout">Đăng Xuất</Link>
                         </li>
                         {isAdmin && (
                             <li>

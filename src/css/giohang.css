@@ -1,42 +1,44 @@
 /* giohang.css */
-table {
-	width: 100%; /* Chiếm toàn bộ chiều rộng của container cha */
-	border-collapse: collapse; /* Gom các đường viền lại */
-	margin: 20px auto; /* Căn giữa bảng */
+
+.table-container {
+	display: flex;
+	justify-content: center; /* Căn giữa theo chiều ngang */
 	}
 
-th, td {
-	border: 1px solid #ddd; /* Đường viền cho các ô */
-	padding: 10px;
+.table {
+	width: 50%;
+	border-collapse: collapse;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+
+.th, .td {
+	border: 1px solid #ddd;
+	padding: 15px;      /* Tăng padding cho dễ đọc */
 	text-align: left;
 	}
 
-th {
-	background-color: #f2f2f2; /* Nền xám nhạt cho tiêu đề */
-	}
-
-tr:nth-child(even) {
-	background-color: #f9f9f9; /* Nền xám rất nhạt cho các dòng chẵn */
-	}
-
-button {
-	background-color: #dc3545; /* Màu đỏ (hoặc tùy chỉnh) */
+.th {
+	background-color: #4CAF50;
 	color: white;
-	padding: 8px 15px;
+	font-weight: bold; /* Làm chữ đậm cho phần header */
+	}
+
+.tbody .tr:nth-child(even) {
+	background-color: #f2f2f2;
+	}
+
+.button {
+	background-color: #f44336;
+	color: white;
+	padding: 10px 15px;  /* Tăng kích thước nút */
 	border: none;
-	border-radius: 4px;
+	border-radius: 5px;   /* Bo góc nút */
 	cursor: pointer;
+	transition: background-color 0.3s; /* Thêm hiệu ứng chuyển tiếp mượt mà */
+	display: block; /* Cho phép margin auto hoạt động */
+	margin: 0 auto; /* Căn giữa theo chiều ngang */
 	}
 
-button:hover {
-	background-color: #c82333; /* Màu đỏ đậm hơn khi di chuột */
-	}
-
-/* Định dạng cho hình ảnh sản phẩm */
-img {
-	max-width: 50px;
-	max-height: 50px;
-	object-fit: cover;
-	margin-right: 10px; /* Khoảng cách giữa ảnh và tên sản phẩm */
-	vertical-align: middle; /* Căn giữa ảnh với văn bản */
+.button:hover {
+	background-color: #d32f2f;
 	}
