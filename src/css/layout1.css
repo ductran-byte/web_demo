@@ -1,4 +1,7 @@
 /* Kiểu dáng chung của thanh điều hướng */
+body, html {
+	height: 100%; /* Đảm bảo thẻ body và html chiếm toàn bộ chiều cao màn hình */
+	}
 .nav {
 	display: flex; /* Sử dụng flexbox để sắp xếp các mục */
 	justify-content: center; /* Căn giữa các mục theo chiều ngang */

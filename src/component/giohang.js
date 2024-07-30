@@ -4,6 +4,7 @@ import "../css/giohang.css";
 
 function Giohang() {
     const [students, setStudents] = useState([]);
+    const formatter = new Intl.NumberFormat('en-US')
 
     useEffect(() => {
         const getAll = async () => {
@@ -21,6 +22,9 @@ function Giohang() {
     };
 
     return (
+        <body style={{
+            height: '90vh',
+        }}>
         <div className="table-container">
             <table className="table">
                 <thead>
@@ -29,7 +33,6 @@ function Giohang() {
                     <th className="th">Tên Sản Phẩm</th>
                     <th className="th">Số Lượng</th>
                     <th className="th">Giá Tiền</th>
-
                     <th className="th">Hành Động</th>
                 </tr>
                 </thead>
@@ -39,7 +42,7 @@ function Giohang() {
                         <td className="td">{item.id}</td>
                         <td className="td">{item.name}</td>
                         <td className="td">{item.qty}</td>
-                        <td className="td">{item.price}</td>
+                        <td className="td">{formatter.format(item.price)} VNĐ</td>
                         <td className="td">
                             <button className="button" onClick={() => deleteStd(item.id)}>
                                 Xoá Sản Phẩm
@@ -50,6 +53,7 @@ function Giohang() {
                 </tbody>
             </table>
         </div>
+        </body>
     );
 }
 

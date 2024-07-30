@@ -19,6 +19,7 @@ function Product({ product }) {
     };
 
     return (
+        <body>
         <div className="product-item" style={{
             display: 'flex',
             justifyContent: 'space-between',
@@ -91,6 +92,7 @@ function Product({ product }) {
                 }}>Thêm vào giỏ hàng</button>
             </div>
         </div>
+        </body>
     );
 }
 

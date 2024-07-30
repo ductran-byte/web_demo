@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import * as studentService from "../service/student";
-import { Link, useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "../css/liststudent.css";
 
 function ListStudent() {
@@ -25,6 +25,9 @@ function ListStudent() {
     };
 
     return (
+        <body style={{
+        height: '90vh',}
+        }>
         <div className="table-container">
             <div className="button1">
                 <button
@@ -40,7 +43,7 @@ function ListStudent() {
 
 
                     }}>
-                    <Link className="link"  style={{
+                    <Link className="link" style={{
                         textDecoration: "none",
                         color: "white",
                         padding: "1px 5px",
@@ -55,7 +58,7 @@ function ListStudent() {
                     }} to={"/student/form"}>Thêm Sản Phẩm</Link>
                 </button>
             </div>
-            <table className="table"  style={{borderRadius:"5px"}}>
+            <table className="table" style={{borderRadius: "5px"}}>
                 <thead>
                 <tr>
                     <th className="th">Id</th>
@@ -103,6 +106,7 @@ function ListStudent() {
                 </tbody>
             </table>
         </div>
+        </body>
     );
 }
 

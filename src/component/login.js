@@ -21,7 +21,7 @@ function Login() {
             setIsLoggedIn(true);
             navigate("/"); // Chuyển hướng đến trang chủ nếu là user
         } else {
-            alert("Wrong credentials");
+            alert("Tài Khoản Hoặc Mật Khẩu Không Chính Xác");
         }
     };
 

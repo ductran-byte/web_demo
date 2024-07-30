@@ -18,7 +18,7 @@ function Layout1({ children }) {
                     <Link to="/giohang">Giỏ Hàng</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact">Liên Hệ</Link>
                 </li>
                 {!isLoggedIn ? (
                     <li>

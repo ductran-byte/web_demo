@@ -36,7 +36,10 @@ function FormStudent() {
     }, []);
 
     return (
-        <div className="form-container"> {/* Thêm class "form-container" */}
+        <body style={{
+            height: '85vh',
+        }}>
+        <div className="form-container">
             <input type="hidden" value={id}/>
             <input
                 type="text"
@@ -60,6 +63,7 @@ function FormStudent() {
 
             <button onClick={() => save()}>Lưu</button>
         </div>
+        </body>
     );
 }
 
