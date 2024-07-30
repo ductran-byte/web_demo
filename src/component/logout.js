@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { CurrentUserContext } from "../App";
 import { useNavigate } from "react-router-dom";
 import * as giohangService from "../service/giohang";
+import * as giohangService from "../service/giohang";
 
 export default function Logout() {
     const { setIsLoggedIn, setIsAdmin } = useContext(CurrentUserContext); // Lấy đúng hàm setIsLoggedIn từ context
